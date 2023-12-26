@@ -1,0 +1,69 @@
+{
+  "path": ".",
+  "version": "0.1.0",
+  "scripts": {
+    "develop-course": "FCC_OS_PORT=8081 NODE_ENV=development npm run develop",
+    "run-course": "FCC_OS_PORT=8081 NODE_ENV=production && cd ./node_modules/@freecodecamp/freecodecamp-os/ && npm run build:client && node .freeCodeCamp/tooling/server.js",
+    "test": {
+      "functionName": "handleMessage",
+      "arguments": [
+        {
+          "message": "Hello World!",
+          "type": "info"
+        }
+      ]
+    }
+  },
+  "workspace": {
+    "previews": [
+      {
+        "open": true,
+        "url": "http://localhost:8081",
+        "showLoader": true,
+        "timeout": 4000
+      }
+    ]
+  },
+  "bash": {
+    ".bashrc": "./bash/.bashrc",
+    "sourcerer.sh": "./bash/sourcerer.sh"
+  },
+  "client": {
+    "assets": {
+      "header": "./client/assets/fcc_primary_large.svg",
+      "favicon": "./client/assets/fcc_primary_small.svg"
+    },
+    "landing": {
+      "description": "Placeholder description",
+      "faq-link": "https://freecodecamp.org",
+      "faq-text": "Link to FAQ related to course"
+    },
+    "static": {
+      "/images": "./curriculum/images"
+    }
+  },
+  "config": {
+    "projects.json": "./config/projects.json",
+    "state.json": "./config/state.json"
+  },
+  "curriculum": {
+    "locales": {
+      "english": "./curriculum/locales/english"
+    }
+  },
+  "hotReload": {
+    "ignore": [
+      ".logs/.temp.log",
+      "config/",
+      "/node_modules/",
+      ".git",
+      "/target/",
+      "/test-ledger/",
+      ".vscode",
+      ".freecodecamp.conf.json"
+    ]
+  },
+  "tooling": {
+    "helpers": "./tooling/helpers.js"
+  }
+}
